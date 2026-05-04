@@ -33,14 +33,16 @@
     .lang-btn:hover { border-color: #cbd5e1; }
     .lang-btn.active { border-color: #22c55e; background: #f0fdf4; }
     .header {
+      position: relative;
       text-align: center;
-      padding: 32px 0 36px;
-      border-bottom: 1px solid #e2e8f0;
-      margin-bottom: 40px;
+      background: linear-gradient(to bottom, #ef4444 50%, #22c55e 50%);
+      margin: 0 -20px 40px;
+      padding: 32px 20px 28px;
     }
-    .car-logo { display: inline-block; margin-bottom: 16px; }
-    h1 { font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
-    .app-name { font-size: 15px; color: #64748b; }
+    .car-logo { display: inline-block; position: relative; z-index: 2; }
+    h1 { font-size: 26px; font-weight: 700; color: #fff; margin-bottom: 4px;
+         text-shadow: 0 1px 4px rgba(0,0,0,0.3); }
+    .app-name { font-size: 15px; color: rgba(255,255,255,0.85); }
     h2 { font-size: 18px; font-weight: 600; color: #0f172a; margin: 36px 0 12px; }
     p { margin-bottom: 12px; color: #334155; }
     ul { margin: 8px 0 12px 20px; color: #334155; }
@@ -67,7 +69,7 @@
 <body>
 <div class="container">
 
-  <div class="lang-bar">
+  <div class="lang-bar" style="position:relative;z-index:10;padding:12px 0 0;">
     <button class="lang-btn active" onclick="setLang('nl')" title="Nederlands">🇳🇱</button>
     <button class="lang-btn" onclick="setLang('en')" title="English">🇬🇧</button>
     <button class="lang-btn" onclick="setLang('de')" title="Deutsch">🇩🇪</button>
@@ -78,7 +80,7 @@
 
   <div class="header">
     <div class="car-logo">
-      <!-- Cartoon auto uit het app-icoon, gele carrosserie -->
+      <!-- Cartoon auto: gele carrosserie, kind-tekening stijl -->
       <svg width="140" height="90" viewBox="264 372 496 256" xmlns="http://www.w3.org/2000/svg">
         <rect x="264" y="480" width="496" height="105" rx="30" fill="#fde047" stroke="#0f172a" stroke-width="14" stroke-linejoin="round"/>
         <rect x="342" y="372" width="350" height="116" rx="44" fill="#fde047" stroke="#0f172a" stroke-width="14" stroke-linejoin="round"/>
@@ -106,7 +108,7 @@
       </svg>
     </div>
     <h1 id="t-title">Privacybeleid</h1>
-    <p class="app-name">Zijn we er al? &nbsp;·&nbsp; Are we there yet?</p>
+    <p class="app-name" style="margin-top:4px;">Zijn we er al? &nbsp;·&nbsp; Are we there yet?</p>
   </div>
 
   <div class="highlight">
